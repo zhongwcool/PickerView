@@ -1,24 +1,9 @@
 package com.test.picker;
 
-import android.app.Activity;
-import android.content.Context;
-import android.graphics.drawable.ColorDrawable;
 import android.os.Bundle;
-import android.util.ArrayMap;
-import android.util.Log;
-import android.view.Gravity;
-import android.view.LayoutInflater;
 import android.view.View;
-import android.view.ViewGroup;
-import android.view.WindowManager;
-import android.widget.AdapterView;
 import android.widget.Button;
-import android.widget.ListView;
-import android.widget.PopupWindow;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import com.youth.picker.PickerView;
 import com.youth.picker.entity.PickerData;
@@ -35,8 +20,8 @@ public class MainActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         initProvinceDatas();
-        show_city_selecter= (Button) findViewById(R.id.show_city_selecter);
-        text= (TextView) findViewById(R.id.text);
+        show_city_selecter = findViewById(R.id.show_city_selecter);
+        text = findViewById(R.id.text);
 
         //选择器数据实体类封装
         PickerData data=new PickerData();

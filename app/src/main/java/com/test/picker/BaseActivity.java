@@ -1,18 +1,19 @@
 package com.test.picker;
 
-import java.io.InputStream;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
-import javax.xml.parsers.SAXParser;
-import javax.xml.parsers.SAXParserFactory;
-
 import android.content.res.AssetManager;
 import android.support.v7.app.AppCompatActivity;
 
 import com.test.picker.domian.CityModel;
 import com.test.picker.domian.DistrictModel;
 import com.test.picker.domian.ProvinceModel;
+
+import java.io.InputStream;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import javax.xml.parsers.SAXParser;
+import javax.xml.parsers.SAXParserFactory;
 
 
 public class BaseActivity extends AppCompatActivity {

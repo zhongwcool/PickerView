@@ -1,7 +1,6 @@
 package com.youth.picker.adapter;
 
 import android.content.Context;
-import android.graphics.Color;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.BaseAdapter;
@@ -36,7 +35,7 @@ public class DataAdapter extends BaseAdapter {
     @Override
     public View getView(int position, View convertView, ViewGroup parent) {
         convertView=View.inflate(context, R.layout.data_textview,null);
-        TextView textView= (TextView) convertView.findViewById(R.id.data_text);
+        TextView textView = convertView.findViewById(R.id.data_text);
         textView.setText(mDatas[position]);
         return textView;
     }

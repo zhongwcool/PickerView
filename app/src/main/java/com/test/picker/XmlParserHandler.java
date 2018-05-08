@@ -4,11 +4,11 @@ import com.test.picker.domian.CityModel;
 import com.test.picker.domian.DistrictModel;
 import com.test.picker.domian.ProvinceModel;
 
+import org.xml.sax.Attributes;
+import org.xml.sax.helpers.DefaultHandler;
+
 import java.util.ArrayList;
 import java.util.List;
-import org.xml.sax.Attributes;
-import org.xml.sax.SAXException;
-import org.xml.sax.helpers.DefaultHandler;
 
 
 public class XmlParserHandler extends DefaultHandler {
@@ -23,7 +23,7 @@ public class XmlParserHandler extends DefaultHandler {
 	}
 
 	@Override
-	public void startDocument() throws SAXException {
+	public void startDocument() {
 	}
 
 	ProvinceModel provinceModel = new ProvinceModel();
@@ -32,7 +32,7 @@ public class XmlParserHandler extends DefaultHandler {
 	
 	@Override
 	public void startElement(String uri, String localName, String qName,
-			Attributes attributes) throws SAXException {
+							 Attributes attributes) {
 		if (qName.equals("province")) {
 			provinceModel = new ProvinceModel();
 			provinceModel.setName(attributes.getValue(0));
@@ -49,8 +49,7 @@ public class XmlParserHandler extends DefaultHandler {
 	}
 
 	@Override
-	public void endElement(String uri, String localName, String qName)
-			throws SAXException {
+	public void endElement(String uri, String localName, String qName) {
 		if (qName.equals("district")) {
 			cityModel.getDistrictList().add(districtModel);
         } else if (qName.equals("city")) {
@@ -61,8 +60,7 @@ public class XmlParserHandler extends DefaultHandler {
 	}
 	
 	@Override
-	public void characters(char[] ch, int start, int length)
-			throws SAXException {
+	public void characters(char[] ch, int start, int length) {
 	}
 
 }

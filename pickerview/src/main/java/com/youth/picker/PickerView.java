@@ -5,7 +5,6 @@ import android.content.Context;
 import android.graphics.drawable.ColorDrawable;
 import android.text.TextUtils;
 import android.util.DisplayMetrics;
-import android.util.Log;
 import android.view.Gravity;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -58,8 +57,7 @@ public class PickerView extends PopupWindow implements View.OnClickListener {
     }
 
     private void initPicker() {
-        LayoutInflater inflater = (LayoutInflater) context
-                .getSystemService(Context.LAYOUT_INFLATER_SERVICE);
+        LayoutInflater inflater = (LayoutInflater) context.getSystemService(Context.LAYOUT_INFLATER_SERVICE);
         view = inflater.inflate(R.layout.picker_view, null);
         this.setContentView(view);
         this.setWidth(ViewGroup.LayoutParams.MATCH_PARENT);
@@ -81,15 +79,15 @@ public class PickerView extends PopupWindow implements View.OnClickListener {
     }
 
     private void initView() {
-        pickerTitleName = (TextView) view.findViewById(R.id.pickerTitleName);
-        pickerConfirm = (TextView) view.findViewById(R.id.pickerConfirm);
-        groupSelect = (RadioGroup) view.findViewById(R.id.groupSelect);
-        mTextFirst = (RadioButton) view.findViewById(R.id.mTextFirst);
-        mTextSecond = (RadioButton) view.findViewById(R.id.mTextSecond);
-        mTextThird = (RadioButton) view.findViewById(R.id.mTextThird);
-        mTextFourth = (RadioButton) view.findViewById(R.id.mTextFourth);
-        pickerList = (ListView) view.findViewById(R.id.pickerList);
-        emptyView = (TextView) view.findViewById(R.id.empty_data_hints);
+        pickerTitleName = view.findViewById(R.id.pickerTitleName);
+        pickerConfirm = view.findViewById(R.id.pickerConfirm);
+        groupSelect = view.findViewById(R.id.groupSelect);
+        mTextFirst = view.findViewById(R.id.mTextFirst);
+        mTextSecond = view.findViewById(R.id.mTextSecond);
+        mTextThird = view.findViewById(R.id.mTextThird);
+        mTextFourth = view.findViewById(R.id.mTextFourth);
+        pickerList = view.findViewById(R.id.pickerList);
+        emptyView = view.findViewById(R.id.empty_data_hints);
         pickerList.setEmptyView(view.findViewById(R.id.picker_list_empty_data));
         mTextFirst.setOnClickListener(this);
         mTextSecond.setOnClickListener(this);
